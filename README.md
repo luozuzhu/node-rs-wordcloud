@@ -1,26 +1,29 @@
-# node-wordcloud ![npm version](https://img.shields.io/npm/v/node-wordcloud.svg) 
+# node-wordcloud ![npm version](https://img.shields.io/npm/v/node-wordcloud.svg)
 
 Tag cloud presentation for NodeJS (Based on [wordcloud2.js](https://github.com/timdream/wordcloud2.js))
-
-
 
 ## Installation
 
 ```bash
-npm install node-wordcloud
+npm install node-rs-wordcloud
 ```
 
 ## Usage
 
 ```javascript
-const { createCanvas } = require('canvas');
-const WordCloud = require('node-wordcloud')();
+const { createCanvas } = require("canvas");
+const WordCloud = require("node-rs-wordcloud")();
 
 const canvas = createCanvas(500, 500);
 
 // Array of words [text: String, weight: Number][]
 // The weight of word isn't the absolute size of word, the real size will be automatically calculated based on options.sizeRange
-const list = [['word', 150], ['hello', 140], ['world', 130], ['test', 90]];
+const list = [
+  ["word", 150],
+  ["hello", 140],
+  ["world", 130],
+  ["test", 90],
+];
 
 const wordcloud = WordCloud(canvas, { list });
 
@@ -55,7 +58,7 @@ Also we added some options:
 
 ```diff
 + {
-+     sizeRange: [16, 68], 
++     sizeRange: [16, 68],
 +     rotationRange: [-70, 70],
 + }
 ```
@@ -72,15 +75,15 @@ In `wordcloud2.js`, you can import module by `const WordCloud = require('wordclo
 
 ```javascript
 // use node-canvas default
-const WordCloud = require('node-wordcloud')();
+const WordCloud = require("node-rs-wordcloud")();
 
 // use node-canvas
-const { createCanvas } = require('canvas');
-const WordCloud = require('node-wordcloud')(createCanvas);
+const { createCanvas } = require("canvas");
+const WordCloud = require("node-rs-wordcloud")(createCanvas);
 
 // use skia-canvas
-const { Canvas } = require('skia-canvas');
-const WordCloud = require('node-wordcloud')((w, h) => new Canvas(w, h));
+const { Canvas } = require("skia-canvas");
+const WordCloud = require("node-rs-wordcloud")((w, h) => new Canvas(w, h));
 
 // etc.
 ```
