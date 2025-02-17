@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/daidr/node-wordcloud.git"
+    "url": "git+https://github.com/luozuzhu/node-rs-wordcloud.git"
   },
   "keywords": [
     "wordcloud",

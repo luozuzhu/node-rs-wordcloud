@@ -65,7 +65,7 @@ Also we added some options:
 
 ## API
 
-We remove the support for generating word cloud in svg format, because some canvas implementation already allow to generate svg directly (such as [node-canvas](https://github.com/Automattic/node-canvas)).
+We remove the support for generating word cloud in svg format, because some canvas implementation already allow to generate svg directly (such as [node-rs-canvas](https://github.com/Automattic/node-rs-canvas)).
 
 This module will not draw word cloud automatically, you need to call `wordcloud.draw()` to draw word cloud. See example for more details.
 
@@ -74,10 +74,10 @@ You can use `wordcloud.updateList(list: Array<[text: String, weight: Number]>)` 
 In `wordcloud2.js`, you can import module by `const WordCloud = require('wordcloud2')`, but in node-wordcloud, it will be `const WordCloud = require('node-wordcloud')()`, you can choose the canvas implementation you want to use by passing `createCanvas` function, here here some examples:
 
 ```javascript
-// use node-canvas default
+// use node-rs-canvas default
 const WordCloud = require("node-rs-wordcloud")();
 
-// use node-canvas
+// use node-rs-canvas
 const { createCanvas } = require("canvas");
 const WordCloud = require("node-rs-wordcloud")(createCanvas);
 
