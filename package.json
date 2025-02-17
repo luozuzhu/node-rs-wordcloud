@@ -1,8 +1,9 @@
 {
   "name": "node-rs-wordcloud",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Tag cloud presentation for NodeJS using @napi-rs/canvas",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,9 +20,9 @@
   "author": "luolang <g657340743@qq@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/daidr/node-wordcloud/issues"
+    "url": "https://github.com/luozuzhu/node-rs-wordcloud/issues"
   },
-  "homepage": "https://github.com/daidr/node-wordcloud#readme",
+  "homepage": "https://github.com/luozuzhu/node-rs-wordcloud#readme",
   "dependencies": {
     "@napi-rs/canvas": "^0.1.67"
   }
